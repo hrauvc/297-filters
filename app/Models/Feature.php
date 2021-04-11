@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Feature extends Model
 {
     use HasFactory;
+
+    public function properties()
+    {
+    	return $this->belongToMany('App\Models\Property');
+    }
+
 }
